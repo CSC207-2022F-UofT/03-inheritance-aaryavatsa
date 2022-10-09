@@ -17,13 +17,11 @@ class BagMain {
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
         for (Bag bag : bags) {
             bag.enhance();  // polymorphism -- the enhance() function depends on bag's subclass
-            if (double_enhance_handbags) {
-                if (bag instanceof HandBag) {
+            if (double_enhance_handbags && bag instanceof HandBag) {
                    bag.enhance();
                 }
             }
         }
-    }
 
     /**
      * TODO: Implement this method

@@ -99,7 +99,7 @@ public abstract class Bag {
      */
 
     public String popItem() {
-        if (numberOfContents > 1) {
+        if (numberOfContents >= 1) {
             String item = contents.remove(numberOfContents - 1);
             numberOfContents -= 1;
             return item;
